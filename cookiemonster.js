@@ -3374,7 +3374,6 @@ function notifyMe() {
     // If it's okay let's create a notification
 	var notification = new Notification("Golden Cookie!", {
                     body: "You have a golden cookie.. \nDon't you want to click it?",
-                    tag: id,
                     icon: "img/goldCookie.png",
                     lang: "",
                     dir: "auto",
@@ -3388,7 +3387,6 @@ function notifyMe() {
       if (permission === "granted") {
         var notification = new Notification("Golden Cookie!", {
                     body: "You have a golden cookie.. \nDon't you want to click it?",
-                    tag: id,
                     icon: "img/goldCookie.png",
                     lang: "",
                     dir: "auto",
