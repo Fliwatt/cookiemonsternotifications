@@ -3372,7 +3372,13 @@ function notifyMe() {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
+	var notification = new Notification("Golden Cookie!", {
+                    body: "You have a golden cookie.. \nDon't you want to click it?",
+                    tag: id,
+                    icon: "img/goldCookie.png",
+                    lang: "",
+                    dir: "auto",
+                });
   }
 
   // Otherwise, we need to ask the user for permission
@@ -3380,7 +3386,13 @@ function notifyMe() {
     Notification.requestPermission().then(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification("Golden Cookie!");
+        var notification = new Notification("Golden Cookie!", {
+                    body: "You have a golden cookie.. \nDon't you want to click it?",
+                    tag: id,
+                    icon: "img/goldCookie.png",
+                    lang: "",
+                    dir: "auto",
+                });
       }
     });
   }
